@@ -1,0 +1,1 @@
+/home/pino/pino_ws/sercure_service/catkin_ws/devel/.private/peripherals_handle/lib/pkgconfig/peripherals_handle.pc

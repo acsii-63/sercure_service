@@ -5,7 +5,8 @@
             "includePath": [
                 "${workspaceFolder}/**",
                 "${vcpkgRoot}/x64-linux/include",
-                "/home/pino/pino_ws/papi/**"
+                "/home/pino/pino_ws/papi/**",
+                "/opt/ros/noetic/**"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/gcc",

@@ -3,6 +3,8 @@
 
 CMakeFiles/image_subscriber_node.dir/src/image_subscriber_node.cpp.o
  /home/pino/catkin_ws/devel/.private/wfov_camera_msgs/include/wfov_camera_msgs/WFOVImage.h
+ /home/pino/pino_ws/papi/PAPI.h
+ /home/pino/pino_ws/papi/include/mission_v1.h
  /home/pino/pino_ws/sercure_service/catkin_ws/src/camera_trigger/src/image_subscriber_node.cpp
  /opt/ros/noetic/include/ros/advertise_options.h
  /opt/ros/noetic/include/ros/advertise_service_options.h

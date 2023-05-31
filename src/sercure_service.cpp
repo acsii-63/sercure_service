@@ -1,6 +1,13 @@
-#include "../papi/PAPI.h"
+#include "/home/pino/pino_ws/papi/PAPI.h"
 
 #include <csignal>
+
+enum PERIPHERAL_STATUS : int
+{
+    WAITING_FOR_ACTIVE = -1,
+    ACTIVE,
+    INACTIVE
+};
 
 volatile bool g_stop = false;
 
@@ -10,14 +17,25 @@ void signalHandler(int signal)
     g_stop = true;
 }
 
+PAPI::communication::Client handlePeripherals("127.0.0.1", 24000);
+
+void handleConnection()
+{
+    handlePeripherals.clientStart();
+}
+
 void doThisInTheLoop()
 {
+    // handleConnection();
+    std::cout << handlePeripherals.reciveMessage();
     return;
 }
 
 int main()
 {
     /*    Run until the sercure service get Ctrl+C    */
+
+    handleConnection();
 
     // Register signal handler for SIGINT (Ctrl+C)
     std::signal(SIGINT, signalHandler);

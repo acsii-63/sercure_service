@@ -13,6 +13,17 @@ find_package(catkin REQUIRED COMPONENTS
   std_msgs
   wfov_camera_msgs
 )
+## Add JSONCPP dependency
+find_package(PkgConfig REQUIRED)
+pkg_check_modules(JSONCPP jsoncpp)
+
+include_directories(${JSONCPP_INCLUDE_DIRS})
+link_directories(${JSONCPP_LIBRARY_DIRS})
+
+## Add pthread library
+set(CMAKE_THREAD_PREFER_PTHREAD TRUE)
+set(THREADS_PREFER_PTHREAD_FLAG TRUE)
+find_package(Threads REQUIRED)
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
@@ -136,7 +147,8 @@ include_directories(
 ## The recommended prefix ensures that target names across packages don't collide
 # add_executable(${PROJECT_NAME}_node src/camera_trigger_node.cpp)
 add_executable(image_subscriber_node src/image_subscriber_node.cpp)
-target_link_libraries(image_subscriber_node ${catkin_LIBRARIES})
+target_link_libraries(image_subscriber_node ${catkin_LIBRARIES} ${JSONCPP_LIBRARIES} Threads::Threads)
+# target_link_libraries(image_subscriber_node PRIVATE JsonCpp::JsonCpp)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -207,3 +219,4 @@ target_link_libraries(image_subscriber_node ${catkin_LIBRARIES})
 
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
+# target_link_libraries(image_subscriber_node PRIVATE REQUIRED)

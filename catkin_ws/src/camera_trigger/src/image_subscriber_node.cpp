@@ -7,21 +7,6 @@
 #include <iostream>
 #include <string>
 
-// void imageCallback(const wfov_camera_msgs::WFOVImage::ConstPtr &msg)
-// {
-//     const sensor_msgs::Image &image = msg->image;
-
-//     if (image.data.size() > 0)
-//     {
-//         ROS_INFO("Received an image with width: %d, height: %d", image.width, image.height);
-//         // Perform operations on the image
-//     }
-//     else
-//     {
-//         ROS_WARN("Received an empty image");
-//     }
-// }
-
 ros::Time lastImageTime;
 ros::Time firstImageTime;
 
