@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/pino/pino_ws/sercure_service/catkin_ws/devel/.private/camera_trigger/setup.sh

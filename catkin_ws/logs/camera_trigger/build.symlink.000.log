@@ -1,0 +1,4 @@
+Symlinking /home/pino/pino_ws/sercure_service/catkin_ws/devel/share/camera_trigger/cmake/camera_triggerConfig-version.cmake
+Symlinking /home/pino/pino_ws/sercure_service/catkin_ws/devel/share/camera_trigger/cmake/camera_triggerConfig.cmake
+Symlinking /home/pino/pino_ws/sercure_service/catkin_ws/devel/lib/camera_trigger/image_subscriber_node
+Symlinking /home/pino/pino_ws/sercure_service/catkin_ws/devel/lib/pkgconfig/camera_trigger.pc
