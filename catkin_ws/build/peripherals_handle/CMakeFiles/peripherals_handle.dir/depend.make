@@ -6,6 +6,14 @@ CMakeFiles/peripherals_handle.dir/src/peripherals_handle_lib.cpp.o: /home/pino/p
 CMakeFiles/peripherals_handle.dir/src/peripherals_handle_lib.cpp.o: /home/pino/pino_ws/papi/include/mission_v1.h
 CMakeFiles/peripherals_handle.dir/src/peripherals_handle_lib.cpp.o: /home/pino/pino_ws/sercure_service/catkin_ws/src/peripherals_handle/include/peripherals_handle/peripherals_handle_lib.h
 CMakeFiles/peripherals_handle.dir/src/peripherals_handle_lib.cpp.o: /home/pino/pino_ws/sercure_service/catkin_ws/src/peripherals_handle/src/peripherals_handle_lib.cpp
+CMakeFiles/peripherals_handle.dir/src/peripherals_handle_lib.cpp.o: /opt/ros/noetic/include/geometry_msgs/Point.h
+CMakeFiles/peripherals_handle.dir/src/peripherals_handle_lib.cpp.o: /opt/ros/noetic/include/geometry_msgs/Pose.h
+CMakeFiles/peripherals_handle.dir/src/peripherals_handle_lib.cpp.o: /opt/ros/noetic/include/geometry_msgs/PoseWithCovariance.h
+CMakeFiles/peripherals_handle.dir/src/peripherals_handle_lib.cpp.o: /opt/ros/noetic/include/geometry_msgs/Quaternion.h
+CMakeFiles/peripherals_handle.dir/src/peripherals_handle_lib.cpp.o: /opt/ros/noetic/include/geometry_msgs/Twist.h
+CMakeFiles/peripherals_handle.dir/src/peripherals_handle_lib.cpp.o: /opt/ros/noetic/include/geometry_msgs/TwistWithCovariance.h
+CMakeFiles/peripherals_handle.dir/src/peripherals_handle_lib.cpp.o: /opt/ros/noetic/include/geometry_msgs/Vector3.h
+CMakeFiles/peripherals_handle.dir/src/peripherals_handle_lib.cpp.o: /opt/ros/noetic/include/nav_msgs/Odometry.h
 CMakeFiles/peripherals_handle.dir/src/peripherals_handle_lib.cpp.o: /opt/ros/noetic/include/ros/advertise_options.h
 CMakeFiles/peripherals_handle.dir/src/peripherals_handle_lib.cpp.o: /opt/ros/noetic/include/ros/advertise_service_options.h
 CMakeFiles/peripherals_handle.dir/src/peripherals_handle_lib.cpp.o: /opt/ros/noetic/include/ros/assert.h

@@ -6,6 +6,14 @@ CMakeFiles/t265_handle.dir/src/t265_handle.cpp.o: /home/pino/pino_ws/papi/PAPI.h
 CMakeFiles/t265_handle.dir/src/t265_handle.cpp.o: /home/pino/pino_ws/papi/include/mission_v1.h
 CMakeFiles/t265_handle.dir/src/t265_handle.cpp.o: /home/pino/pino_ws/sercure_service/catkin_ws/src/peripherals_handle/include/peripherals_handle/peripherals_handle_lib.h
 CMakeFiles/t265_handle.dir/src/t265_handle.cpp.o: /home/pino/pino_ws/sercure_service/catkin_ws/src/peripherals_handle/src/t265_handle.cpp
+CMakeFiles/t265_handle.dir/src/t265_handle.cpp.o: /opt/ros/noetic/include/geometry_msgs/Point.h
+CMakeFiles/t265_handle.dir/src/t265_handle.cpp.o: /opt/ros/noetic/include/geometry_msgs/Pose.h
+CMakeFiles/t265_handle.dir/src/t265_handle.cpp.o: /opt/ros/noetic/include/geometry_msgs/PoseWithCovariance.h
+CMakeFiles/t265_handle.dir/src/t265_handle.cpp.o: /opt/ros/noetic/include/geometry_msgs/Quaternion.h
+CMakeFiles/t265_handle.dir/src/t265_handle.cpp.o: /opt/ros/noetic/include/geometry_msgs/Twist.h
+CMakeFiles/t265_handle.dir/src/t265_handle.cpp.o: /opt/ros/noetic/include/geometry_msgs/TwistWithCovariance.h
+CMakeFiles/t265_handle.dir/src/t265_handle.cpp.o: /opt/ros/noetic/include/geometry_msgs/Vector3.h
+CMakeFiles/t265_handle.dir/src/t265_handle.cpp.o: /opt/ros/noetic/include/nav_msgs/Odometry.h
 CMakeFiles/t265_handle.dir/src/t265_handle.cpp.o: /opt/ros/noetic/include/ros/advertise_options.h
 CMakeFiles/t265_handle.dir/src/t265_handle.cpp.o: /opt/ros/noetic/include/ros/advertise_service_options.h
 CMakeFiles/t265_handle.dir/src/t265_handle.cpp.o: /opt/ros/noetic/include/ros/assert.h

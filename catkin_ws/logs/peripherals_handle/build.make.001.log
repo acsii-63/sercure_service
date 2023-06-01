@@ -1,23 +1,10 @@
 [35m[1mScanning dependencies of target peripherals_handle[0m
 [ 12%] [32mBuilding CXX object CMakeFiles/peripherals_handle.dir/src/peripherals_handle_lib.cpp.o[0m
-[ 25%] [32m[1mLinking CXX shared library /home/pino/pino_ws/sercure_service/catkin_ws/devel/.private/peripherals_handle/lib/libperipherals_handle.so[0m
-[ 25%] Built target peripherals_handle
-[35m[1mScanning dependencies of target flir_handle[0m
-[35m[1mScanning dependencies of target t265_handle[0m
-[35m[1mScanning dependencies of target d455_handle[0m
-[ 37%] [32mBuilding CXX object CMakeFiles/flir_handle.dir/src/flir_handle.cpp.o[0m
-[ 50%] [32mBuilding CXX object CMakeFiles/d455_handle.dir/src/d455_handle.cpp.o[0m
-[ 62%] [32mBuilding CXX object CMakeFiles/t265_handle.dir/src/t265_handle.cpp.o[0m
-[01m[K/home/pino/pino_ws/sercure_service/catkin_ws/src/peripherals_handle/src/d455_handle.cpp:[m[K In function ‘[01m[Kvoid imageCallback(const ConstPtr&)[m[K’:
-[01m[K/home/pino/pino_ws/sercure_service/catkin_ws/src/peripherals_handle/src/d455_handle.cpp:17:41:[m[K [01;31m[Kerror: [m[K‘[01m[Kimage[m[K’ was not declared in this scope; did you mean ‘[01m[K_image[m[K’?
-   17 |     ss << "CAM_FORWARD " << image_exist([01;31m[Kimage[m[K) << std::endl;
-      |                                         [01;31m[K^~~~~[m[K
-      |                                         [32m[K_image[m[K
-make[2]: *** [CMakeFiles/d455_handle.dir/build.make:63: CMakeFiles/d455_handle.dir/src/d455_handle.cpp.o] Error 1
-make[1]: *** [CMakeFiles/Makefile2:241: CMakeFiles/d455_handle.dir/all] Error 2
-make[1]: *** Waiting for unfinished jobs....
-[ 75%] [32m[1mLinking CXX executable /home/pino/pino_ws/sercure_service/catkin_ws/devel/.private/peripherals_handle/lib/peripherals_handle/t265_handle[0m
-[ 87%] [32m[1mLinking CXX executable /home/pino/pino_ws/sercure_service/catkin_ws/devel/.private/peripherals_handle/lib/peripherals_handle/flir_handle[0m
-[ 87%] Built target t265_handle
-[ 87%] Built target flir_handle
+In file included from [01m[K/home/pino/pino_ws/sercure_service/catkin_ws/src/peripherals_handle/src/peripherals_handle_lib.cpp:1[m[K:
+[01m[K/home/pino/pino_ws/sercure_service/catkin_ws/src/peripherals_handle/include/peripherals_handle/peripherals_handle_lib.h:37:22:[m[K [01;31m[Kerror: [m[Kduplicate ‘[01m[Kconst[m[K’
+   37 | int T265_exist(const [01;31m[Kconst[m[K nav_msgs::Odometry::ConstPtr &msg);
+      |                      [01;31m[K^~~~~[m[K
+      |                      [31m[K-----[m[K
+make[2]: *** [CMakeFiles/peripherals_handle.dir/build.make:63: CMakeFiles/peripherals_handle.dir/src/peripherals_handle_lib.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:268: CMakeFiles/peripherals_handle.dir/all] Error 2
 make: *** [Makefile:141: all] Error 2

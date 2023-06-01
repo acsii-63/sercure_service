@@ -1,0 +1,26 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/pino/catkin_ws/devel/include/**",
+        "/opt/ros/noetic/include/**",
+        "/home/pino/catkin_ws/src/px4_controllers/controller_msgs/include/**",
+        "/home/pino/catkin_ws/src/px4_controllers/geometric_controller/include/**",
+        "/home/pino/pino_ws/sercure_service/catkin_ws/src/peripherals_handle/include/**",
+        "/home/pino/catkin_ws/src/realsense-ros/realsense2_camera/include/**",
+        "/home/pino/catkin_ws/src/flir_camera_driver/spinnaker_camera_driver/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}

@@ -9,13 +9,23 @@
 #include <geometry_msgs/Pose.h>
 #include <geometry_msgs/Point.h>
 
-#include <iostream>
-#include <string>
+ros::Time lastFLIRTime;
+ros::Time firstFLIRTime;
 
-#include <csignal>
+ros::Time firstD455Time;
+ros::Time lastD455Time;
 
-ros::Time lastImageTime;
-ros::Time firstImageTime;
+ros::Time lastLIDARTime;
+ros::Time firstLIDARTime;
 
-// Return status of a image, exist or not.
-int image_exist(const sensor_msgs::Image &_image);
+ros::Time lastT265Time;
+ros::Time firstT265Time;
+
+ros::Time lastFCUTime;
+ros::Time firstFCUTime;
+
+int FLIR_exist(const wfov_camera_msgs::WFOVImage::ConstPtr &msg);
+
+int D455_exist(const sensor_msgs::Image::ConstPtr &msg);
+
+int T265_exist(const nav_msgs::Odometry::ConstPtr &msg);
