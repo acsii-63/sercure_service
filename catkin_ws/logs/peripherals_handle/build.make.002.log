@@ -1,12 +1,16 @@
-[35m[1mScanning dependencies of target flir_handle[0m
-[ 25%] Built target t265_handle
-[ 50%] Built target peripherals_handle
-[ 75%] Built target d455_handle
-[ 87%] [32mBuilding CXX object CMakeFiles/flir_handle.dir/src/flir_handle.cpp.o[0m
-[100%] [32m[1mLinking CXX executable /home/pino/pino_ws/sercure_service/catkin_ws/devel/.private/peripherals_handle/lib/peripherals_handle/flir_handle[0m
-/usr/bin/ld: CMakeFiles/flir_handle.dir/src/flir_handle.cpp.o: in function `imageCallback(boost::shared_ptr<wfov_camera_msgs::WFOVImage_<std::allocator<void> > const> const&)':
-flir_handle.cpp:(.text+0x7770): undefined reference to `image_exist(sensor_msgs::Image_<std::allocator<void> > const&)'
-collect2: error: ld returned 1 exit status
-make[2]: *** [CMakeFiles/flir_handle.dir/build.make:101: /home/pino/pino_ws/sercure_service/catkin_ws/devel/.private/peripherals_handle/lib/peripherals_handle/flir_handle] Error 1
-make[1]: *** [CMakeFiles/Makefile2:214: CMakeFiles/flir_handle.dir/all] Error 2
+[ 25%] Built target peripherals_handle
+[35m[1mScanning dependencies of target d455_handle[0m
+[ 50%] Built target t265_handle
+[ 75%] Built target flir_handle
+[ 87%] [32mBuilding CXX object CMakeFiles/d455_handle.dir/src/d455_handle.cpp.o[0m
+[01m[K/home/pino/pino_ws/sercure_service/catkin_ws/src/peripherals_handle/src/d455_handle.cpp:[m[K In function ‘[01m[Kvoid imageCallback(const ConstPtr&)[m[K’:
+[01m[K/home/pino/pino_ws/sercure_service/catkin_ws/src/peripherals_handle/src/d455_handle.cpp:17:41:[m[K [01;31m[Kerror: [m[Kinvalid initialization of reference of type ‘[01m[Kconst Image&[m[K’ {aka ‘[01m[Kconst sensor_msgs::Image_<std::allocator<void> >&[m[K’} from expression of type ‘[01m[Kconst ConstPtr[m[K’ {aka ‘[01m[Kconst boost::shared_ptr<const sensor_msgs::Image_<std::allocator<void> > >[m[K’}
+   17 |     ss << "CAM_FORWARD " << image_exist([01;31m[K_image[m[K) << std::endl;
+      |                                         [01;31m[K^~~~~~[m[K
+In file included from [01m[K/home/pino/pino_ws/sercure_service/catkin_ws/src/peripherals_handle/src/d455_handle.cpp:5[m[K:
+[01m[K/home/pino/pino_ws/sercure_service/catkin_ws/src/peripherals_handle/include/peripherals_handle/peripherals_handle_lib.h:32:43:[m[K [01;36m[Knote: [m[Kin passing argument 1 of ‘[01m[Kint image_exist(const Image&)[m[K’
+   32 | int image_exist([01;36m[Kconst sensor_msgs::Image &_image[m[K);
+      |                 [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~[m[K
+make[2]: *** [CMakeFiles/d455_handle.dir/build.make:63: CMakeFiles/d455_handle.dir/src/d455_handle.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:241: CMakeFiles/d455_handle.dir/all] Error 2
 make: *** [Makefile:141: all] Error 2

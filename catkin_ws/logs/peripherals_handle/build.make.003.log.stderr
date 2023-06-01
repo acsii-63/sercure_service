@@ -1,7 +1,0 @@
-/usr/bin/ld: CMakeFiles/flir_handle.dir/src/flir_handle.cpp.o: in function `imageCallback(boost::shared_ptr<wfov_camera_msgs::WFOVImage_<std::allocator<void> > const> const&)':
-flir_handle.cpp:(.text+0x7770): undefined reference to `image_exist(sensor_msgs::Image_<std::allocator<void> > const&)'
-collect2: error: ld returned 1 exit status
-make[2]: *** [CMakeFiles/flir_handle.dir/build.make:101: /home/pino/pino_ws/sercure_service/catkin_ws/devel/.private/peripherals_handle/lib/peripherals_handle/flir_handle] Error 1
-make[1]: *** [CMakeFiles/Makefile2:214: CMakeFiles/flir_handle.dir/all] Error 2
-make[1]: *** Waiting for unfinished jobs....
-make: *** [Makefile:141: all] Error 2

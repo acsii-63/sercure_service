@@ -1,9 +1,3 @@
-[ 25%] Built target peripherals_handle
-[35m[1mScanning dependencies of target d455_handle[0m
-[35m[1mScanning dependencies of target t265_handle[0m
-[ 37%] [32mBuilding CXX object CMakeFiles/d455_handle.dir/src/d455_handle.cpp.o[0m
-[ 50%] [32mBuilding CXX object CMakeFiles/t265_handle.dir/src/t265_handle.cpp.o[0m
-[ 75%] Built target flir_handle
 In file included from [01m[K/home/pino/pino_ws/sercure_service/catkin_ws/src/peripherals_handle/src/d455_handle.cpp:4[m[K:
 [01m[K/home/pino/pino_ws/papi/PAPI.h:32:22:[m[K [01;31m[Kerror: [m[Kdeclaration of ‘[01m[Kclass std::vector<double>[m[K’ in namespace ‘[01m[Kboost::mpl[m[K’ which does not enclose ‘[01m[Kstd[m[K’
    32 | #define vector3 std::[01;31m[Kvector<double>[m[K // Vector3 contains 3 double variables

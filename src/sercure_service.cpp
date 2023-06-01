@@ -1,13 +1,7 @@
 #include "/home/pino/pino_ws/papi/PAPI.h"
 
-#include <csignal>
-
-enum PERIPHERAL_STATUS : int
-{
-    WAITING_FOR_ACTIVE = -1,
-    ACTIVE,
-    INACTIVE
-};
+std::vector<std::string> kill_list;
+std::vector<std::string> temp_vector;
 
 volatile bool g_stop = false;
 
@@ -17,62 +11,27 @@ void signalHandler(int signal)
     g_stop = true;
 }
 
-PAPI::communication::Client handlePeripherals("127.0.0.1", 24000);
+PAPI::communication::Client handlePeripherals("127.0.0.1", DEFAULT_CAM_FORWARD_NODE_PORT);
 
-void handleConnection()
+void addNodeToKillList(std::string _node)
 {
-    handlePeripherals.clientStart();
+    temp_vector = PAPI::system::getPIDList(_node);
+    kill_list.reserve(kill_list.size() + temp_vector.size());
+    kill_list.insert(kill_list.end(), temp_vector.begin(), temp_vector.end());
+    temp_vector.clear();
 }
 
-void doThisInTheLoop()
+void killAllNode()
 {
-    // handleConnection();
-    std::cout << handlePeripherals.reciveMessage();
-    return;
-}
+    addNodeToKillList("rosmaster");
+    addNodeToKillList("mavros");
+    addNodeToKillList("px4");
+    addNodeToKillList("gazebo");
+    addNodeToKillList("flir_handle");
+    addNodeToKillList("d455_handle");
+    addNodeToKillList("t265_handle");
 
-int main()
-{
-    /*    Run until the sercure service get Ctrl+C    */
-
-    handleConnection();
-
-    // Register signal handler for SIGINT (Ctrl+C)
-    std::signal(SIGINT, signalHandler);
-
-    while (!g_stop)
-    {
-        doThisInTheLoop();
-    }
-
-    /***************************************************/
-
-    /*                    Run once                     */
-
-    std::vector<std::string> kill_list;
-    std::vector<std::string> temp_vector;
     std::string command = "";
-
-    temp_vector = PAPI::system::getPIDList("rosmaster");
-    kill_list.reserve(kill_list.size() + temp_vector.size());
-    kill_list.insert(kill_list.end(), temp_vector.begin(), temp_vector.end());
-    temp_vector.clear();
-
-    temp_vector = PAPI::system::getPIDList("mavros");
-    kill_list.reserve(kill_list.size() + temp_vector.size());
-    kill_list.insert(kill_list.end(), temp_vector.begin(), temp_vector.end());
-    temp_vector.clear();
-
-    temp_vector = PAPI::system::getPIDList("px4");
-    kill_list.reserve(kill_list.size() + temp_vector.size());
-    kill_list.insert(kill_list.end(), temp_vector.begin(), temp_vector.end());
-    temp_vector.clear();
-
-    temp_vector = PAPI::system::getPIDList("gazebo");
-    kill_list.reserve(kill_list.size() + temp_vector.size());
-    kill_list.insert(kill_list.end(), temp_vector.begin(), temp_vector.end());
-    temp_vector.clear();
-
     for (auto it = kill_list.begin(); it != kill_list.end(); ++it)
     {
         command = "kill -9 " + *it;
@@ -81,9 +40,39 @@ int main()
 
         std::cout << *it << " ";
     }
+}
+
+void doThisInTheLoop()
+{
+    std::cout << handlePeripherals.reciveMessage();
+
+    return;
+}
+
+int main()
+{
+    /*                     Run once                    */
+
+    // Register signal handler for SIGINT (Ctrl+C)
+    std::signal(SIGINT, signalHandler);
+    handlePeripherals.clientStart();
+    std::cout << handlePeripherals.reciveMessage();
 
     /***************************************************/
 
-    std::cout << "Sercure service  stopped." << std::endl;
+    while (!g_stop)
+    {
+        /* Run until the sercure service get Ctrl+C */
+        doThisInTheLoop();
+    }
+
+    /***************************************************/
+    /*               Run after get Ctrl+C              */
+
+    handlePeripherals.clientClose();
+
+    killAllNode();
+
+    std::cout << "Sercure service stopped." << std::endl;
     return 0;
 }

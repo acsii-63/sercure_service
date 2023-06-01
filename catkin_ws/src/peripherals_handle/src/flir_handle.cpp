@@ -13,18 +13,32 @@ PAPI::communication::Server server(DEFAULT_CAM_DOWNWARD_NODE_PORT);
 void imageCallback(const wfov_camera_msgs::WFOVImage::ConstPtr &msg)
 {
     const sensor_msgs::Image &image = msg->image;
-    // std::cout << CAM_STATUS::ACTIVE << std::endl;
     std::cout << "FLIR Camera status: " << image_exist(image) << std::endl;
+
+    std::stringstream ss;
+    ss << "CAM_DOWNWARD " << image_exist(image) << std::endl;
+    server.sendMsg(ss.str());
+}
+
+void init()
+{
+    server.serverStart();
 }
 
 int main(int argc, char **argv)
 {
+    init();
+
     ros::init(argc, argv, "flir_handle");
     ros::NodeHandle nh;
 
     ros::Subscriber sub = nh.subscribe("/camera/image", 10, imageCallback);
 
     ros::spin();
+
+    /************************/
+
+    server.serverClose();
 
     return 0;
 }

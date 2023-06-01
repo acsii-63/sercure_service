@@ -1,8 +1,9 @@
-[01m[K/home/pino/pino_ws/sercure_service/catkin_ws/src/peripherals_handle/src/flir_handle.cpp:[m[K In function ‘[01m[Kvoid imageCallback(const ConstPtr&)[m[K’:
-[01m[K/home/pino/pino_ws/sercure_service/catkin_ws/src/peripherals_handle/src/flir_handle.cpp:15:56:[m[K [01;31m[Kerror: [m[K‘[01m[K_image[m[K’ was not declared in this scope; did you mean ‘[01m[Kimage[m[K’?
-   15 |     std::cout << "FLIR Camera status: " << image_exist([01;31m[K_image[m[K) << std::endl;
-      |                                                        [01;31m[K^~~~~~[m[K
-      |                                                        [32m[Kimage[m[K
-make[2]: *** [CMakeFiles/flir_handle.dir/build.make:63: CMakeFiles/flir_handle.dir/src/flir_handle.cpp.o] Error 1
-make[1]: *** [CMakeFiles/Makefile2:214: CMakeFiles/flir_handle.dir/all] Error 2
+[01m[K/home/pino/pino_ws/sercure_service/catkin_ws/src/peripherals_handle/src/d455_handle.cpp:[m[K In function ‘[01m[Kvoid imageCallback(const ConstPtr&)[m[K’:
+[01m[K/home/pino/pino_ws/sercure_service/catkin_ws/src/peripherals_handle/src/d455_handle.cpp:17:41:[m[K [01;31m[Kerror: [m[K‘[01m[Kimage[m[K’ was not declared in this scope; did you mean ‘[01m[K_image[m[K’?
+   17 |     ss << "CAM_FORWARD " << image_exist([01;31m[Kimage[m[K) << std::endl;
+      |                                         [01;31m[K^~~~~[m[K
+      |                                         [32m[K_image[m[K
+make[2]: *** [CMakeFiles/d455_handle.dir/build.make:63: CMakeFiles/d455_handle.dir/src/d455_handle.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:241: CMakeFiles/d455_handle.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
 make: *** [Makefile:141: all] Error 2

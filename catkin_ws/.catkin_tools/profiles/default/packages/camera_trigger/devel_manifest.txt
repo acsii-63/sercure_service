@@ -1,6 +1,0 @@
-camera_trigger
-/home/pino/pino_ws/sercure_service/catkin_ws/devel/.private/camera_trigger/cmake.lock /home/pino/pino_ws/sercure_service/catkin_ws/devel/./cmake.lock
-/home/pino/pino_ws/sercure_service/catkin_ws/devel/.private/camera_trigger/share/camera_trigger/cmake/camera_triggerConfig-version.cmake /home/pino/pino_ws/sercure_service/catkin_ws/devel/share/camera_trigger/cmake/camera_triggerConfig-version.cmake
-/home/pino/pino_ws/sercure_service/catkin_ws/devel/.private/camera_trigger/share/camera_trigger/cmake/camera_triggerConfig.cmake /home/pino/pino_ws/sercure_service/catkin_ws/devel/share/camera_trigger/cmake/camera_triggerConfig.cmake
-/home/pino/pino_ws/sercure_service/catkin_ws/devel/.private/camera_trigger/lib/camera_trigger/image_subscriber_node /home/pino/pino_ws/sercure_service/catkin_ws/devel/lib/camera_trigger/image_subscriber_node
-/home/pino/pino_ws/sercure_service/catkin_ws/devel/.private/camera_trigger/lib/pkgconfig/camera_trigger.pc /home/pino/pino_ws/sercure_service/catkin_ws/devel/lib/pkgconfig/camera_trigger.pc

@@ -1,8 +1,0 @@
-prefix=/home/pino/pino_ws/sercure_service/catkin_ws/devel/.private/camera_trigger
-
-Name: camera_trigger
-Description: Description of camera_trigger
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: roscpp sensor_msgs std_msgs wfov_camera_msgs

@@ -1,1 +1,0 @@
-/home/pino/pino_ws/sercure_service/catkin_ws/devel/.private/camera_trigger/share/camera_trigger/cmake/camera_triggerConfig.cmake

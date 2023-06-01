@@ -1,6 +1,44 @@
-/usr/bin/ld: CMakeFiles/flir_handle.dir/src/flir_handle.cpp.o: in function `imageCallback(boost::shared_ptr<wfov_camera_msgs::WFOVImage_<std::allocator<void> > const> const&)':
-flir_handle.cpp:(.text+0x7796): undefined reference to `image_exist(sensor_msgs::Image_<std::allocator<void> > const&)'
-collect2: error: ld returned 1 exit status
-make[2]: *** [CMakeFiles/flir_handle.dir/build.make:101: /home/pino/pino_ws/sercure_service/catkin_ws/devel/.private/peripherals_handle/lib/peripherals_handle/flir_handle] Error 1
-make[1]: *** [CMakeFiles/Makefile2:214: CMakeFiles/flir_handle.dir/all] Error 2
+In file included from [01m[K/home/pino/pino_ws/sercure_service/catkin_ws/src/peripherals_handle/src/t265_handle.cpp:7[m[K:
+[01m[K/home/pino/pino_ws/papi/PAPI.h:32:22:[m[K [01;31m[Kerror: [m[Kdeclaration of ‘[01m[Kclass std::vector<double>[m[K’ in namespace ‘[01m[Kboost::mpl[m[K’ which does not enclose ‘[01m[Kstd[m[K’
+   32 | #define vector3 std::[01;31m[Kvector<double>[m[K // Vector3 contains 3 double variables
+      |                      [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/pino/pino_ws/papi/PAPI.h:32:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kstd::vector<double>[m[K’ is not a template
+   32 | #define vector3 [01;31m[Kstd[m[K::vector<double> // Vector3 contains 3 double variables
+      |                 [01;31m[K^~~[m[K
+In file included from [01m[K/usr/include/boost/mpl/aux_/include_preprocessed.hpp:37[m[K,
+                 from [01m[K/usr/include/boost/mpl/vector.hpp:46[m[K,
+                 from [01m[K/usr/include/boost/math/policies/policy.hpp:14[m[K,
+                 from [01m[K/usr/include/boost/math/policies/error_handling.hpp:21[m[K,
+                 from [01m[K/usr/include/boost/math/special_functions/round.hpp:14[m[K,
+                 from [01m[K/opt/ros/noetic/include/ros/time.h:58[m[K,
+                 from [01m[K/opt/ros/noetic/include/ros/ros.h:38[m[K,
+                 from [01m[K/home/pino/pino_ws/sercure_service/catkin_ws/src/peripherals_handle/include/peripherals_handle/peripherals_handle_lib.h:1[m[K,
+                 from [01m[K/home/pino/pino_ws/sercure_service/catkin_ws/src/peripherals_handle/src/t265_handle.cpp:8[m[K:
+[01m[K/usr/include/boost/mpl/aux_/preprocessed/gcc/vector.hpp:67:14:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K{[m[K’ before ‘[01m[K<[m[K’ token
+   67 |     : vector3[01;31m[K<[m[K T0,T1,T2 >
+      |              [01;31m[K^[m[K
+In file included from [01m[K/home/pino/pino_ws/sercure_service/catkin_ws/src/peripherals_handle/src/d455_handle.cpp:4[m[K:
+[01m[K/home/pino/pino_ws/papi/PAPI.h:32:22:[m[K [01;31m[Kerror: [m[Kdeclaration of ‘[01m[Kclass std::vector<double>[m[K’ in namespace ‘[01m[Kboost::mpl[m[K’ which does not enclose ‘[01m[Kstd[m[K’
+   32 | #define vector3 std::[01;31m[Kvector<double>[m[K // Vector3 contains 3 double variables
+      |                      [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/pino/pino_ws/papi/PAPI.h:32:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kstd::vector<double>[m[K’ is not a template
+   32 | #define vector3 [01;31m[Kstd[m[K::vector<double> // Vector3 contains 3 double variables
+      |                 [01;31m[K^~~[m[K
+In file included from [01m[K/usr/include/boost/mpl/aux_/include_preprocessed.hpp:37[m[K,
+                 from [01m[K/usr/include/boost/mpl/vector.hpp:46[m[K,
+                 from [01m[K/usr/include/boost/math/policies/policy.hpp:14[m[K,
+                 from [01m[K/usr/include/boost/math/policies/error_handling.hpp:21[m[K,
+                 from [01m[K/usr/include/boost/math/special_functions/round.hpp:14[m[K,
+                 from [01m[K/opt/ros/noetic/include/ros/time.h:58[m[K,
+                 from [01m[K/opt/ros/noetic/include/ros/ros.h:38[m[K,
+                 from [01m[K/home/pino/pino_ws/sercure_service/catkin_ws/src/peripherals_handle/include/peripherals_handle/peripherals_handle_lib.h:1[m[K,
+                 from [01m[K/home/pino/pino_ws/sercure_service/catkin_ws/src/peripherals_handle/src/d455_handle.cpp:5[m[K:
+[01m[K/usr/include/boost/mpl/aux_/preprocessed/gcc/vector.hpp:67:14:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K{[m[K’ before ‘[01m[K<[m[K’ token
+   67 |     : vector3[01;31m[K<[m[K T0,T1,T2 >
+      |              [01;31m[K^[m[K
+make[2]: *** [CMakeFiles/t265_handle.dir/build.make:63: CMakeFiles/t265_handle.dir/src/t265_handle.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:187: CMakeFiles/t265_handle.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+make[2]: *** [CMakeFiles/d455_handle.dir/build.make:63: CMakeFiles/d455_handle.dir/src/d455_handle.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:241: CMakeFiles/d455_handle.dir/all] Error 2
 make: *** [Makefile:141: all] Error 2
