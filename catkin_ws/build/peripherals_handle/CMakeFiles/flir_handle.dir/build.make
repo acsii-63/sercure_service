@@ -79,6 +79,7 @@ flir_handle_EXTERNAL_OBJECTS =
 
 /home/pino/pino_ws/sercure_service/catkin_ws/devel/.private/peripherals_handle/lib/peripherals_handle/flir_handle: CMakeFiles/flir_handle.dir/src/flir_handle.cpp.o
 /home/pino/pino_ws/sercure_service/catkin_ws/devel/.private/peripherals_handle/lib/peripherals_handle/flir_handle: CMakeFiles/flir_handle.dir/build.make
+/home/pino/pino_ws/sercure_service/catkin_ws/devel/.private/peripherals_handle/lib/peripherals_handle/flir_handle: /home/pino/pino_ws/sercure_service/catkin_ws/devel/.private/peripherals_handle/lib/libperipherals_handle.so
 /home/pino/pino_ws/sercure_service/catkin_ws/devel/.private/peripherals_handle/lib/peripherals_handle/flir_handle: /opt/ros/noetic/lib/libroscpp.so
 /home/pino/pino_ws/sercure_service/catkin_ws/devel/.private/peripherals_handle/lib/peripherals_handle/flir_handle: /usr/lib/x86_64-linux-gnu/libpthread.so
 /home/pino/pino_ws/sercure_service/catkin_ws/devel/.private/peripherals_handle/lib/peripherals_handle/flir_handle: /usr/lib/x86_64-linux-gnu/libboost_chrono.so.1.71.0

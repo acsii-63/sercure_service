@@ -79,6 +79,7 @@ d455_handle_EXTERNAL_OBJECTS =
 
 /home/pino/pino_ws/sercure_service/catkin_ws/devel/.private/peripherals_handle/lib/peripherals_handle/d455_handle: CMakeFiles/d455_handle.dir/src/d455_handle.cpp.o
 /home/pino/pino_ws/sercure_service/catkin_ws/devel/.private/peripherals_handle/lib/peripherals_handle/d455_handle: CMakeFiles/d455_handle.dir/build.make
+/home/pino/pino_ws/sercure_service/catkin_ws/devel/.private/peripherals_handle/lib/peripherals_handle/d455_handle: /home/pino/pino_ws/sercure_service/catkin_ws/devel/.private/peripherals_handle/lib/libperipherals_handle.so
 /home/pino/pino_ws/sercure_service/catkin_ws/devel/.private/peripherals_handle/lib/peripherals_handle/d455_handle: /opt/ros/noetic/lib/libroscpp.so
 /home/pino/pino_ws/sercure_service/catkin_ws/devel/.private/peripherals_handle/lib/peripherals_handle/d455_handle: /usr/lib/x86_64-linux-gnu/libpthread.so
 /home/pino/pino_ws/sercure_service/catkin_ws/devel/.private/peripherals_handle/lib/peripherals_handle/d455_handle: /usr/lib/x86_64-linux-gnu/libboost_chrono.so.1.71.0

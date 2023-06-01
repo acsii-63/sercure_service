@@ -6,6 +6,14 @@ CMakeFiles/flir_handle.dir/src/flir_handle.cpp.o: /home/pino/pino_ws/papi/PAPI.h
 CMakeFiles/flir_handle.dir/src/flir_handle.cpp.o: /home/pino/pino_ws/papi/include/mission_v1.h
 CMakeFiles/flir_handle.dir/src/flir_handle.cpp.o: /home/pino/pino_ws/sercure_service/catkin_ws/src/peripherals_handle/include/peripherals_handle/peripherals_handle_lib.h
 CMakeFiles/flir_handle.dir/src/flir_handle.cpp.o: /home/pino/pino_ws/sercure_service/catkin_ws/src/peripherals_handle/src/flir_handle.cpp
+CMakeFiles/flir_handle.dir/src/flir_handle.cpp.o: /opt/ros/noetic/include/geometry_msgs/Point.h
+CMakeFiles/flir_handle.dir/src/flir_handle.cpp.o: /opt/ros/noetic/include/geometry_msgs/Pose.h
+CMakeFiles/flir_handle.dir/src/flir_handle.cpp.o: /opt/ros/noetic/include/geometry_msgs/PoseWithCovariance.h
+CMakeFiles/flir_handle.dir/src/flir_handle.cpp.o: /opt/ros/noetic/include/geometry_msgs/Quaternion.h
+CMakeFiles/flir_handle.dir/src/flir_handle.cpp.o: /opt/ros/noetic/include/geometry_msgs/Twist.h
+CMakeFiles/flir_handle.dir/src/flir_handle.cpp.o: /opt/ros/noetic/include/geometry_msgs/TwistWithCovariance.h
+CMakeFiles/flir_handle.dir/src/flir_handle.cpp.o: /opt/ros/noetic/include/geometry_msgs/Vector3.h
+CMakeFiles/flir_handle.dir/src/flir_handle.cpp.o: /opt/ros/noetic/include/nav_msgs/Odometry.h
 CMakeFiles/flir_handle.dir/src/flir_handle.cpp.o: /opt/ros/noetic/include/ros/advertise_options.h
 CMakeFiles/flir_handle.dir/src/flir_handle.cpp.o: /opt/ros/noetic/include/ros/advertise_service_options.h
 CMakeFiles/flir_handle.dir/src/flir_handle.cpp.o: /opt/ros/noetic/include/ros/assert.h

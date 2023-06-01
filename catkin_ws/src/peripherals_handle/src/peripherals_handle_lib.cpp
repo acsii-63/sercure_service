@@ -1,6 +1,6 @@
-#include "../include/peripherals_handle/peripherals_handle_lib.h"
+#include "peripherals_handle/peripherals_handle_lib.h"
 
-int image_exits(const sensor_msgs::Image &_image)
+int image_exist(const sensor_msgs::Image &_image)
 {
     if (_image.data.size() > 0)
     {

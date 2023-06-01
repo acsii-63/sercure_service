@@ -79,6 +79,7 @@ t265_handle_EXTERNAL_OBJECTS =
 
 /home/pino/pino_ws/sercure_service/catkin_ws/devel/.private/peripherals_handle/lib/peripherals_handle/t265_handle: CMakeFiles/t265_handle.dir/src/t265_handle.cpp.o
 /home/pino/pino_ws/sercure_service/catkin_ws/devel/.private/peripherals_handle/lib/peripherals_handle/t265_handle: CMakeFiles/t265_handle.dir/build.make
+/home/pino/pino_ws/sercure_service/catkin_ws/devel/.private/peripherals_handle/lib/peripherals_handle/t265_handle: /home/pino/pino_ws/sercure_service/catkin_ws/devel/.private/peripherals_handle/lib/libperipherals_handle.so
 /home/pino/pino_ws/sercure_service/catkin_ws/devel/.private/peripherals_handle/lib/peripherals_handle/t265_handle: /opt/ros/noetic/lib/libroscpp.so
 /home/pino/pino_ws/sercure_service/catkin_ws/devel/.private/peripherals_handle/lib/peripherals_handle/t265_handle: /usr/lib/x86_64-linux-gnu/libpthread.so
 /home/pino/pino_ws/sercure_service/catkin_ws/devel/.private/peripherals_handle/lib/peripherals_handle/t265_handle: /usr/lib/x86_64-linux-gnu/libboost_chrono.so.1.71.0

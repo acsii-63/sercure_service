@@ -1,0 +1,55 @@
+[35m[1mScanning dependencies of target d455_handle[0m
+[35m[1mScanning dependencies of target t265_handle[0m
+[35m[1mScanning dependencies of target flir_handle[0m
+[35m[1mScanning dependencies of target peripherals_handle[0m
+[ 12%] [32mBuilding CXX object CMakeFiles/peripherals_handle.dir/src/peripherals_handle_lib.cpp.o[0m
+[ 25%] [32mBuilding CXX object CMakeFiles/t265_handle.dir/src/t265_handle.cpp.o[0m
+[ 37%] [32mBuilding CXX object CMakeFiles/d455_handle.dir/src/d455_handle.cpp.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/flir_handle.dir/src/flir_handle.cpp.o[0m
+In file included from [01m[K/home/pino/pino_ws/sercure_service/catkin_ws/src/peripherals_handle/src/peripherals_handle_lib.cpp:1[m[K:
+[01m[K/home/pino/pino_ws/sercure_service/catkin_ws/src/peripherals_handle/src/../include/peripherals_handle/peripherals_handle_lib.h:11:1:[m[K [01;31m[Kerror: [m[K‘[01m[Kros[m[K’ does not name a type
+   11 | [01;31m[Kros[m[K::Time lastImageTime;
+      | [01;31m[K^~~[m[K
+[01m[K/home/pino/pino_ws/sercure_service/catkin_ws/src/peripherals_handle/src/../include/peripherals_handle/peripherals_handle_lib.h:12:1:[m[K [01;31m[Kerror: [m[K‘[01m[Kros[m[K’ does not name a type
+   12 | [01;31m[Kros[m[K::Time firstImageTime;
+      | [01;31m[K^~~[m[K
+[01m[K/home/pino/pino_ws/sercure_service/catkin_ws/src/peripherals_handle/src/../include/peripherals_handle/peripherals_handle_lib.h:14:23:[m[K [01;31m[Kerror: [m[K‘[01m[Ksensor_msgs[m[K’ does not name a type
+   14 | int image_exist(const [01;31m[Ksensor_msgs[m[K::Image &_image);
+      |                       [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/pino/pino_ws/sercure_service/catkin_ws/src/peripherals_handle/src/../include/peripherals_handle/peripherals_handle_lib.h:14:42:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[K&[m[K’ token
+   14 | int image_exist(const sensor_msgs::Image [01;31m[K&[m[K_image);
+      |                                          [01;31m[K^[m[K
+[01m[K/home/pino/pino_ws/sercure_service/catkin_ws/src/peripherals_handle/src/../include/peripherals_handle/peripherals_handle_lib.h:14:41:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K&[m[K’ token
+   14 | int image_exist[34m[K([m[Kconst sensor_msgs::Image[01;31m[K [m[K[32m[K&[m[K_image);
+      |                [34m[K~[m[K                        [01;31m[K^[m[K[32m[K~[m[K
+      |                                         [32m[K)[m[K
+[01m[K/home/pino/pino_ws/sercure_service/catkin_ws/src/peripherals_handle/src/../include/peripherals_handle/peripherals_handle_lib.h:14:43:[m[K [01;31m[Kerror: [m[Kexpected initializer before ‘[01m[K_image[m[K’
+   14 | int image_exist(const sensor_msgs::Image &[01;31m[K_image[m[K);
+      |                                           [01;31m[K^~~~~~[m[K
+[01m[K/home/pino/pino_ws/sercure_service/catkin_ws/src/peripherals_handle/src/peripherals_handle_lib.cpp:3:23:[m[K [01;31m[Kerror: [m[K‘[01m[Ksensor_msgs[m[K’ does not name a type
+    3 | int image_exits(const [01;31m[Ksensor_msgs[m[K::Image &_image)
+      |                       [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/pino/pino_ws/sercure_service/catkin_ws/src/peripherals_handle/src/peripherals_handle_lib.cpp:3:42:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[K&[m[K’ token
+    3 | int image_exits(const sensor_msgs::Image [01;31m[K&[m[K_image)
+      |                                          [01;31m[K^[m[K
+[01m[K/home/pino/pino_ws/sercure_service/catkin_ws/src/peripherals_handle/src/peripherals_handle_lib.cpp:3:41:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K&[m[K’ token
+    3 | int image_exits[34m[K([m[Kconst sensor_msgs::Image[01;31m[K [m[K[32m[K&[m[K_image)
+      |                [34m[K~[m[K                        [01;31m[K^[m[K[32m[K~[m[K
+      |                                         [32m[K)[m[K
+[01m[K/home/pino/pino_ws/sercure_service/catkin_ws/src/peripherals_handle/src/peripherals_handle_lib.cpp:3:43:[m[K [01;31m[Kerror: [m[Kexpected initializer before ‘[01m[K_image[m[K’
+    3 | int image_exits(const sensor_msgs::Image &[01;31m[K_image[m[K)
+      |                                           [01;31m[K^~~~~~[m[K
+make[2]: *** [CMakeFiles/peripherals_handle.dir/build.make:63: CMakeFiles/peripherals_handle.dir/src/peripherals_handle_lib.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:268: CMakeFiles/peripherals_handle.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+[ 62%] [32m[1mLinking CXX executable /home/pino/pino_ws/sercure_service/catkin_ws/devel/.private/peripherals_handle/lib/peripherals_handle/t265_handle[0m
+[ 75%] [32m[1mLinking CXX executable /home/pino/pino_ws/sercure_service/catkin_ws/devel/.private/peripherals_handle/lib/peripherals_handle/flir_handle[0m
+[ 87%] [32m[1mLinking CXX executable /home/pino/pino_ws/sercure_service/catkin_ws/devel/.private/peripherals_handle/lib/peripherals_handle/d455_handle[0m
+[ 87%] Built target t265_handle
+/usr/bin/ld: CMakeFiles/flir_handle.dir/src/flir_handle.cpp.o: in function `imageCallback(boost::shared_ptr<wfov_camera_msgs::WFOVImage_<std::allocator<void> > const> const&)':
+flir_handle.cpp:(.text+0x7770): undefined reference to `image_exist(sensor_msgs::Image_<std::allocator<void> > const&)'
+collect2: error: ld returned 1 exit status
+make[2]: *** [CMakeFiles/flir_handle.dir/build.make:101: /home/pino/pino_ws/sercure_service/catkin_ws/devel/.private/peripherals_handle/lib/peripherals_handle/flir_handle] Error 1
+make[1]: *** [CMakeFiles/Makefile2:214: CMakeFiles/flir_handle.dir/all] Error 2
+[ 87%] Built target d455_handle
+make: *** [Makefile:141: all] Error 2

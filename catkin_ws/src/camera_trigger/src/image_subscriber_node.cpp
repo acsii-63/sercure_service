@@ -47,7 +47,6 @@ void imageCallback(const wfov_camera_msgs::WFOVImage::ConstPtr &msg)
 
     std::cout << "Cam status: " << cam_status(image) << std::endl;
 
-    
 }
 
 int main(int argc, char **argv)

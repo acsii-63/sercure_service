@@ -182,7 +182,7 @@ gtest/googletest/clean: gtest/googletest/CMakeFiles/gtest.dir/clean
 # Target rules for target CMakeFiles/t265_handle.dir
 
 # All Build rule for target.
-CMakeFiles/t265_handle.dir/all:
+CMakeFiles/t265_handle.dir/all: CMakeFiles/peripherals_handle.dir/all
 	$(MAKE) -f CMakeFiles/t265_handle.dir/build.make CMakeFiles/t265_handle.dir/depend
 	$(MAKE) -f CMakeFiles/t265_handle.dir/build.make CMakeFiles/t265_handle.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pino/pino_ws/sercure_service/catkin_ws/build/peripherals_handle/CMakeFiles --progress-num=15,16 "Built target t265_handle"
@@ -190,7 +190,7 @@ CMakeFiles/t265_handle.dir/all:
 
 # Build rule for subdir invocation for target.
 CMakeFiles/t265_handle.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pino/pino_ws/sercure_service/catkin_ws/build/peripherals_handle/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pino/pino_ws/sercure_service/catkin_ws/build/peripherals_handle/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/t265_handle.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pino/pino_ws/sercure_service/catkin_ws/build/peripherals_handle/CMakeFiles 0
 .PHONY : CMakeFiles/t265_handle.dir/rule
@@ -209,7 +209,7 @@ CMakeFiles/t265_handle.dir/clean:
 # Target rules for target CMakeFiles/flir_handle.dir
 
 # All Build rule for target.
-CMakeFiles/flir_handle.dir/all:
+CMakeFiles/flir_handle.dir/all: CMakeFiles/peripherals_handle.dir/all
 	$(MAKE) -f CMakeFiles/flir_handle.dir/build.make CMakeFiles/flir_handle.dir/depend
 	$(MAKE) -f CMakeFiles/flir_handle.dir/build.make CMakeFiles/flir_handle.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pino/pino_ws/sercure_service/catkin_ws/build/peripherals_handle/CMakeFiles --progress-num=3,4 "Built target flir_handle"
@@ -217,7 +217,7 @@ CMakeFiles/flir_handle.dir/all:
 
 # Build rule for subdir invocation for target.
 CMakeFiles/flir_handle.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pino/pino_ws/sercure_service/catkin_ws/build/peripherals_handle/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pino/pino_ws/sercure_service/catkin_ws/build/peripherals_handle/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/flir_handle.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pino/pino_ws/sercure_service/catkin_ws/build/peripherals_handle/CMakeFiles 0
 .PHONY : CMakeFiles/flir_handle.dir/rule
@@ -236,7 +236,7 @@ CMakeFiles/flir_handle.dir/clean:
 # Target rules for target CMakeFiles/d455_handle.dir
 
 # All Build rule for target.
-CMakeFiles/d455_handle.dir/all:
+CMakeFiles/d455_handle.dir/all: CMakeFiles/peripherals_handle.dir/all
 	$(MAKE) -f CMakeFiles/d455_handle.dir/build.make CMakeFiles/d455_handle.dir/depend
 	$(MAKE) -f CMakeFiles/d455_handle.dir/build.make CMakeFiles/d455_handle.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pino/pino_ws/sercure_service/catkin_ws/build/peripherals_handle/CMakeFiles --progress-num=1,2 "Built target d455_handle"
@@ -244,7 +244,7 @@ CMakeFiles/d455_handle.dir/all:
 
 # Build rule for subdir invocation for target.
 CMakeFiles/d455_handle.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pino/pino_ws/sercure_service/catkin_ws/build/peripherals_handle/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pino/pino_ws/sercure_service/catkin_ws/build/peripherals_handle/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/d455_handle.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pino/pino_ws/sercure_service/catkin_ws/build/peripherals_handle/CMakeFiles 0
 .PHONY : CMakeFiles/d455_handle.dir/rule
