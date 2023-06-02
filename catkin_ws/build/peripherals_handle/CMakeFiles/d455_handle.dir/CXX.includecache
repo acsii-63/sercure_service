@@ -43,6 +43,8 @@ errno.h
 -
 csignal
 -
+fcntl.h
+-
 sys/socket.h
 -
 sys/wait.h

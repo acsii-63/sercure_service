@@ -12,14 +12,18 @@ void D455Callback(const sensor_msgs::Image::ConstPtr &msg)
     d455_server.sendMsg(ss.str());
 }
 
-void init()
+int connectToSercureService()
 {
-    d455_server.serverStart();
+    return d455_server.serverStart();
 }
 
 int main(int argc, char **argv)
 {
-    init();
+    if (connectToSercureService() == -1)
+    {
+        std::cerr << "Cannot connect to sercure service, kill d455_handle node.\n";
+        return -1;
+    }
 
     ros::init(argc, argv, "d455_handle");
     ros::NodeHandle nh;

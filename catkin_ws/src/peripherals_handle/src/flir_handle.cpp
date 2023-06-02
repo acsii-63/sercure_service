@@ -12,14 +12,18 @@ void FLIRCallback(const wfov_camera_msgs::WFOVImage::ConstPtr &msg)
     server.sendMsg(ss.str());
 }
 
-void init()
+int connectToSercureService()
 {
-    server.serverStart();
+    return server.serverStart();
 }
 
 int main(int argc, char **argv)
 {
-    init();
+    if (connectToSercureService() == -1)
+    {
+        std::cerr << "Cannot connect to sercure service, kill flir_handle node.\n";
+        return -1;
+    }
 
     ros::init(argc, argv, "flir_handle");
     ros::NodeHandle nh;
