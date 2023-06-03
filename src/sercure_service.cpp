@@ -40,6 +40,7 @@ void killAllNode()
     addNodeToKillList("flir_handle");
     addNodeToKillList("d455_handle");
     addNodeToKillList("t265_handle");
+    addNodeToKillList("spinnaker");
 
     std::string command = "";
     for (auto it = kill_list.begin(); it != kill_list.end(); ++it)
@@ -150,10 +151,9 @@ void close()
 
 void doThisInTheLoop()
 {
-    std::cout << client_CAM_DOWNWARD.reciveMessage() << std::endl
-              << client_CAM_FORWARD.reciveMessage() << std::endl
-              << client_CAM_ODOM.reciveMessage() << std::endl
-              << std::endl;
+    std::cout << client_CAM_DOWNWARD.reciveMessage() << " | "
+              << client_CAM_FORWARD.reciveMessage() << " | "
+              << client_CAM_ODOM.reciveMessage() << std::endl;
 
     return;
 }
