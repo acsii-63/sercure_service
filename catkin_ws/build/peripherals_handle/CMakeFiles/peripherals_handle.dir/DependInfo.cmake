@@ -19,6 +19,7 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/usr/include/jsoncpp"
+  "/usr/local/include/opencv4"
   "/home/pino/pino_ws/sercure_service/catkin_ws/src/peripherals_handle/include"
   "/home/pino/catkin_ws/devel/.private/wfov_camera_msgs/include"
   "/opt/ros/noetic/include"

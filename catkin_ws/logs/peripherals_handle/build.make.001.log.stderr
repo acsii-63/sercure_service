@@ -1,8 +1,0 @@
-In file included from [01m[K/home/pino/pino_ws/sercure_service/catkin_ws/src/peripherals_handle/src/peripherals_handle_lib.cpp:1[m[K:
-[01m[K/home/pino/pino_ws/sercure_service/catkin_ws/src/peripherals_handle/include/peripherals_handle/peripherals_handle_lib.h:37:22:[m[K [01;31m[Kerror: [m[Kduplicate ‘[01m[Kconst[m[K’
-   37 | int T265_exist(const [01;31m[Kconst[m[K nav_msgs::Odometry::ConstPtr &msg);
-      |                      [01;31m[K^~~~~[m[K
-      |                      [31m[K-----[m[K
-make[2]: *** [CMakeFiles/peripherals_handle.dir/build.make:63: CMakeFiles/peripherals_handle.dir/src/peripherals_handle_lib.cpp.o] Error 1
-make[1]: *** [CMakeFiles/Makefile2:268: CMakeFiles/peripherals_handle.dir/all] Error 2
-make: *** [Makefile:141: all] Error 2

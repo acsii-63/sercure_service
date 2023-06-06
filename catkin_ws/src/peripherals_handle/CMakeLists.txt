@@ -26,6 +26,13 @@ set(CMAKE_THREAD_PREFER_PTHREAD TRUE)
 set(THREADS_PREFER_PTHREAD_FLAG TRUE)
 find_package(Threads REQUIRED)
 
+# Add OpenCV
+find_package(OpenCV REQUIRED)
+include_directories(${OpenCV_INCLUDE_DIRS})
+
+# Add cv_bridge
+find_package(cv_bridge REQUIRED)
+
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
 
@@ -150,16 +157,37 @@ add_library(${PROJECT_NAME}
 ## The recommended prefix ensures that target names across packages don't collide
 # add_executable(${PROJECT_NAME}_node src/peripherals_handle_node.cpp)
 add_executable(d455_handle src/d455_handle.cpp)
-target_link_libraries(d455_handle ${PROJECT_NAME} ${catkin_LIBRARIES} ${JSONCPP_LIBRARIES} Threads::Threads)
+target_link_libraries(d455_handle
+  ${PROJECT_NAME}
+  ${catkin_LIBRARIES}
+  ${JSONCPP_LIBRARIES}
+  ${OpenCV_LIBRARIES}
+  ${cv_bridge_LIBRARIES}
+  Threads::Threads
+)
 
 add_executable(flir_handle src/flir_handle.cpp)
-target_link_libraries(flir_handle ${PROJECT_NAME} ${catkin_LIBRARIES} ${JSONCPP_LIBRARIES} Threads::Threads)
+target_link_libraries(flir_handle
+  ${PROJECT_NAME}
+  ${catkin_LIBRARIES}
+  ${JSONCPP_LIBRARIES}
+  ${OpenCV_LIBRARIES}
+  ${cv_bridge_LIBRARIES}
+  Threads::Threads
+)
+
+add_executable(t265_handle src/t265_handle.cpp)
+target_link_libraries(t265_handle
+  ${PROJECT_NAME}
+  ${catkin_LIBRARIES}
+  ${JSONCPP_LIBRARIES}
+  ${OpenCV_LIBRARIES}
+  ${cv_bridge_LIBRARIES}
+  Threads::Threads
+)
 
 # add_executable(lidar_handle src/lidar_handle.cpp)
 # target_link_libraries(lidar_handle ${catkin_LIBRARIES} ${JSONCPP_LIBRARIES} Threads::Threads)
-
-add_executable(t265_handle src/t265_handle.cpp)
-target_link_libraries(t265_handle ${PROJECT_NAME} ${catkin_LIBRARIES} ${JSONCPP_LIBRARIES} Threads::Threads)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the

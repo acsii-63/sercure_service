@@ -9,6 +9,9 @@
 #include <geometry_msgs/Pose.h>
 #include <geometry_msgs/Point.h>
 
+#include <opencv2/opencv.hpp>
+#include <cv_bridge/cv_bridge.h>
+
 ros::Time lastFLIRTime;
 ros::Time firstFLIRTime;
 

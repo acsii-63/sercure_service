@@ -1,7 +1,0 @@
-[ 25%] Built target peripherals_handle
-[35m[1mScanning dependencies of target d455_handle[0m
-[ 50%] Built target flir_handle
-[ 75%] [32mBuilding CXX object CMakeFiles/d455_handle.dir/src/d455_handle.cpp.o[0m
-[ 87%] Built target t265_handle
-[100%] [32m[1mLinking CXX executable /home/pino/pino_ws/sercure_service/catkin_ws/devel/.private/peripherals_handle/lib/peripherals_handle/d455_handle[0m
-[100%] Built target d455_handle

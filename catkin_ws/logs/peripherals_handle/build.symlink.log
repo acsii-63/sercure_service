@@ -1,7 +1,7 @@
-Linked: (/home/pino/pino_ws/sercure_service/catkin_ws/devel/.private/peripherals_handle/share/peripherals_handle/cmake/peripherals_handleConfig.cmake, /home/pino/pino_ws/sercure_service/catkin_ws/devel/share/peripherals_handle/cmake/peripherals_handleConfig.cmake)
-Linked: (/home/pino/pino_ws/sercure_service/catkin_ws/devel/.private/peripherals_handle/share/peripherals_handle/cmake/peripherals_handleConfig-version.cmake, /home/pino/pino_ws/sercure_service/catkin_ws/devel/share/peripherals_handle/cmake/peripherals_handleConfig-version.cmake)
-Linked: (/home/pino/pino_ws/sercure_service/catkin_ws/devel/.private/peripherals_handle/lib/libperipherals_handle.so, /home/pino/pino_ws/sercure_service/catkin_ws/devel/lib/libperipherals_handle.so)
-Linked: (/home/pino/pino_ws/sercure_service/catkin_ws/devel/.private/peripherals_handle/lib/peripherals_handle/flir_handle, /home/pino/pino_ws/sercure_service/catkin_ws/devel/lib/peripherals_handle/flir_handle)
-Linked: (/home/pino/pino_ws/sercure_service/catkin_ws/devel/.private/peripherals_handle/lib/peripherals_handle/t265_handle, /home/pino/pino_ws/sercure_service/catkin_ws/devel/lib/peripherals_handle/t265_handle)
-Linked: (/home/pino/pino_ws/sercure_service/catkin_ws/devel/.private/peripherals_handle/lib/peripherals_handle/d455_handle, /home/pino/pino_ws/sercure_service/catkin_ws/devel/lib/peripherals_handle/d455_handle)
-Linked: (/home/pino/pino_ws/sercure_service/catkin_ws/devel/.private/peripherals_handle/lib/pkgconfig/peripherals_handle.pc, /home/pino/pino_ws/sercure_service/catkin_ws/devel/lib/pkgconfig/peripherals_handle.pc)
+Symlinking /home/pino/pino_ws/sercure_service/catkin_ws/devel/share/peripherals_handle/cmake/peripherals_handleConfig.cmake
+Symlinking /home/pino/pino_ws/sercure_service/catkin_ws/devel/share/peripherals_handle/cmake/peripherals_handleConfig-version.cmake
+Symlinking /home/pino/pino_ws/sercure_service/catkin_ws/devel/lib/libperipherals_handle.so
+Symlinking /home/pino/pino_ws/sercure_service/catkin_ws/devel/lib/peripherals_handle/flir_handle
+Symlinking /home/pino/pino_ws/sercure_service/catkin_ws/devel/lib/peripherals_handle/t265_handle
+Symlinking /home/pino/pino_ws/sercure_service/catkin_ws/devel/lib/peripherals_handle/d455_handle
+Symlinking /home/pino/pino_ws/sercure_service/catkin_ws/devel/lib/pkgconfig/peripherals_handle.pc
