@@ -37,10 +37,11 @@ void killAllNode()
     addNodeToKillList("mavros");
     addNodeToKillList("px4");
     addNodeToKillList("gazebo");
-    addNodeToKillList("flir_handle");
-    addNodeToKillList("d455_handle");
-    addNodeToKillList("t265_handle");
+    // addNodeToKillList("flir_handle");
+    // addNodeToKillList("d455_handle");
+    // addNodeToKillList("t265_handle");
     addNodeToKillList("spinnaker");
+    addNodeToKillList("realsense2");
     addNodeToKillList("peripherals");
     addNodeToKillList("control_service");
 
@@ -143,6 +144,21 @@ void start()
 {
     // addPeripheralsList();
     // startPeripheralsClient(peripheral_list);
+    std::string control_srv_cmd = "cd";
+    std::vector<std::string> control_srv_argv;
+    control_srv_argv.push_back("/home/pino/pino_ws/control_service/src");
+    control_srv_argv.push_back("&&");
+    control_srv_argv.push_back("./control_service");
+
+    std::string peripheral_cmd = "rosrun";
+    std::vector<std::string> peripheral_argv;
+    peripheral_argv.push_back("peripherals_status");
+    peripheral_argv.push_back("automatic");
+
+    PAPI::system::runCommand_system(control_srv_cmd, control_srv_argv);
+    sleep(5); // Wait for performace
+
+    PAPI::system::runCommand_system(peripheral_cmd, peripheral_argv);
 }
 
 void close()
