@@ -33,6 +33,7 @@ void killProcess()
     addToKillList("realsense2");
     addToKillList("peripherals_status");
     addToKillList("control_service");
+    addToKillList("\"nc -l -k -p\"");
 
     std::string command = "";
     for (auto it = kill_list.begin(); it != kill_list.end(); ++it)
@@ -45,37 +46,71 @@ void killProcess()
     }
 }
 
-void driver_loader()
+// void driver_loader()
+// {
+//     std::string realsense_cmd = "roslaunch";
+//     std::vector<std::string> realsense_argv;
+//     realsense_argv.push_back("realsense2_camera");
+//     realsense_argv.push_back("rs_d400_and_t265.launch");
+//     realsense_argv.push_back("> /home/pino/logs/roslaunch_logs/realsense_log.log");
+//     realsense_argv.push_back("2>&1 &");
+
+//     std::string spinnaker_cmd = "roslaunch";
+//     std::vector<std::string> spinnaker_argv;
+//     spinnaker_argv.push_back("spinnaker_camera_driver");
+//     spinnaker_argv.push_back("color_cam.launch");
+//     spinnaker_argv.push_back("> /home/pino/logs/roslaunch_logs/spinnaker_log.log");
+//     spinnaker_argv.push_back("2>&1 &");
+
+//     PAPI::system::runCommand_system(realsense_cmd, realsense_argv);
+//     sleep(2); // Wait for performace
+
+//     PAPI::system::runCommand_system(spinnaker_cmd, spinnaker_argv);
+//     sleep(2); // Wait for performace
+// }
+
+void message_listener()
 {
-    std::string realsense_cmd = "roslaunch";
-    std::vector<std::string> realsense_argv;
-    realsense_argv.push_back("realsense2_camera");
-    realsense_argv.push_back("rs_d400_and_t265.launch");
-    realsense_argv.push_back("> /home/pino/logs/roslaunch_logs/realsense_log.log");
-    realsense_argv.push_back("2>&1 &");
+    std::string cmd = "nc";
 
-    std::string spinnaker_cmd = "roslaunch";
-    std::vector<std::string> spinnaker_argv;
-    spinnaker_argv.push_back("spinnaker_camera_driver");
-    spinnaker_argv.push_back("color_cam.launch");
-    spinnaker_argv.push_back("> /home/pino/logs/roslaunch_logs/spinnaker_log.log");
-    spinnaker_argv.push_back("2>&1 &");
+    std::vector<std::string> argv;
+    argv.push_back("-l -k -p");
+    argv.push_back(std::to_string(DEFAULT_CONTROL_CONFIRM_PORT));
+    argv.push_back(">>");
+    argv.push_back(DEFAULT_MESSAGE_FILE_PATH);
+    argv.push_back("&");
 
-    PAPI::system::runCommand_system(realsense_cmd, realsense_argv);
-    sleep(2); // Wait for performace
-
-    PAPI::system::runCommand_system(spinnaker_cmd, spinnaker_argv);
-    sleep(2); // Wait for performace
+    PAPI::system::runCommand_system(cmd, argv);
 }
 
 void start()
 {
-    driver_loader();
+    // driver_loader();
+    message_listener();
+}
+
+void clearMessageFile()
+{
+    std::string cmd;
+    std::vector<std::string> argv;
+
+    cmd = "rm";
+    argv.push_back("-f");
+    argv.push_back(DEFAULT_MESSAGE_FILE_PATH);
+    PAPI::system::runCommand_system(cmd, argv);
+    PAPI::system::sleepLessThanASecond(0.1);
+    cmd.clear();
+    argv.clear();
+
+    cmd = "touch";
+    argv.push_back(DEFAULT_MESSAGE_FILE_PATH);
+    PAPI::system::runCommand_system(cmd, argv);
 }
 
 void close()
 {
     killProcess();
+    clearMessageFile();
 }
 
 void doThisInTheLoop()
@@ -105,6 +140,6 @@ int main()
 
     close();
 
-    std::cout << "Sercure service stopped." << std::endl;
+    std::cout << "\nSercure service stopped." << std::endl;
     return 0;
 }
