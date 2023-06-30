@@ -31,6 +31,7 @@ void killProcess()
     addToKillList("gazebo");
     addToKillList("spinnaker");
     addToKillList("realsense2");
+    addToKillList("driver_loader");
     addToKillList("peripherals_status");
     addToKillList("control_service");
     addToKillList("\"nc -l -k -p\"");
@@ -46,29 +47,6 @@ void killProcess()
     }
 }
 
-// void driver_loader()
-// {
-//     std::string realsense_cmd = "roslaunch";
-//     std::vector<std::string> realsense_argv;
-//     realsense_argv.push_back("realsense2_camera");
-//     realsense_argv.push_back("rs_d400_and_t265.launch");
-//     realsense_argv.push_back("> /home/pino/logs/roslaunch_logs/realsense_log.log");
-//     realsense_argv.push_back("2>&1 &");
-
-//     std::string spinnaker_cmd = "roslaunch";
-//     std::vector<std::string> spinnaker_argv;
-//     spinnaker_argv.push_back("spinnaker_camera_driver");
-//     spinnaker_argv.push_back("color_cam.launch");
-//     spinnaker_argv.push_back("> /home/pino/logs/roslaunch_logs/spinnaker_log.log");
-//     spinnaker_argv.push_back("2>&1 &");
-
-//     PAPI::system::runCommand_system(realsense_cmd, realsense_argv);
-//     sleep(2); // Wait for performace
-
-//     PAPI::system::runCommand_system(spinnaker_cmd, spinnaker_argv);
-//     sleep(2); // Wait for performace
-// }
-
 void message_listener()
 {
     std::string cmd = "nc";
@@ -82,6 +60,22 @@ void message_listener()
 
     PAPI::system::runCommand_system(cmd, argv);
 }
+
+// void driver_loader()
+// {
+//     try
+//     {
+//         std::string cmd = "./home/pino/pino_ws/booted/driver_loader";
+//         std::vector<std::string> argv;
+//         argv.push_back(">> /home/pino/logs/driver_loader.log");
+//         argv.push_back("&");
+//         PAPI::system::runCommand_system(cmd, argv);
+//     }
+//     catch (const std::exception &e)
+//     {
+//         std::cerr << e.what() << '\n';
+//     }
+// }
 
 void start()
 {
@@ -107,10 +101,25 @@ void clearMessageFile()
     PAPI::system::runCommand_system(cmd, argv);
 }
 
+void clearDir(const std::string &_dir)
+{
+    std::string cmd = "rm";
+    std::vector<std::string> argv;
+    argv.push_back("-rf");
+    argv.push_back(_dir);
+    argv.push_back("&&");
+    argv.push_back("mkdir");
+    argv.push_back("-p");
+    argv.push_back(_dir);
+
+    PAPI::system::runCommand_system(cmd, argv);
+}
+
 void close()
 {
     killProcess();
     clearMessageFile();
+    clearDir(DEFAULT_MISSION_DIR_PATH);
 }
 
 void doThisInTheLoop()
