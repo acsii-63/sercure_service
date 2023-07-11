@@ -61,25 +61,8 @@ void message_listener()
     PAPI::system::runCommand_system(cmd, argv);
 }
 
-// void driver_loader()
-// {
-//     try
-//     {
-//         std::string cmd = "./home/pino/pino_ws/booted/driver_loader";
-//         std::vector<std::string> argv;
-//         argv.push_back(">> /home/pino/logs/driver_loader.log");
-//         argv.push_back("&");
-//         PAPI::system::runCommand_system(cmd, argv);
-//     }
-//     catch (const std::exception &e)
-//     {
-//         std::cerr << e.what() << '\n';
-//     }
-// }
-
 void start()
 {
-    // driver_loader();
     message_listener();
 }
 
