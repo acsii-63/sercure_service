@@ -34,7 +34,9 @@ void killProcess()
     addToKillList("driver_loader");
     addToKillList("peripherals_status");
     addToKillList("control_service");
+    addToKillList("control_pkg");
     addToKillList("\"nc -l -k -p\"");
+    addToKillList("\"nc -l -p\"");
 
     std::string command = "";
     for (auto it = kill_list.begin(); it != kill_list.end(); ++it)
@@ -42,7 +44,7 @@ void killProcess()
         command = "kill -9 " + *it;
         std::system(command.c_str());
         command.clear();
-
+        PAPI::system::sleepLessThanASecond(0.1);
         std::cout << *it << " ";
     }
 }
@@ -63,7 +65,7 @@ void message_listener()
 
 void start()
 {
-    message_listener();
+    // message_listener();
 }
 
 void clearMessageFile()
