@@ -1,8 +1,0 @@
-prefix=/home/pino/pino_ws/sercure_service/catkin_ws/devel/.private/peripherals_handle
-
-Name: peripherals_handle
-Description: Description of peripherals_handle
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

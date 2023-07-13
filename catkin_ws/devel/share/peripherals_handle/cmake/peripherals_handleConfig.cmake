@@ -1,1 +1,0 @@
-/home/pino/pino_ws/sercure_service/catkin_ws/devel/.private/peripherals_handle/share/peripherals_handle/cmake/peripherals_handleConfig.cmake
