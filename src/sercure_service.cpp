@@ -103,8 +103,17 @@ void clearDir(const std::string &_dir)
 void close()
 {
     killProcess();
-    clearMessageFile();
+    // clearMessageFile();
+
     clearDir(DEFAULT_MISSION_DIR_PATH);
+    PAPI::system::sleepLessThanASecond(0.1);
+    clearDir(DEFAULT_IMAGE_DIR_PATH);
+    PAPI::system::sleepLessThanASecond(0.1);
+
+    std::string cmd = "touch";
+    std::vector<std::string> argv;
+    argv.push_back(DEFAULT_MESSAGE_FILE_PATH);
+    PAPI::system::runCommand_system(cmd, argv);
 }
 
 void doThisInTheLoop()
