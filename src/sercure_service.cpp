@@ -37,6 +37,7 @@ void killProcess()
     addToKillList("control_pkg");
     addToKillList("\"nc -l -k -p\"");
     addToKillList("\"nc -l -p\"");
+    addToKillList("calib");
 
     std::string command = "";
     for (auto it = kill_list.begin(); it != kill_list.end(); ++it)
